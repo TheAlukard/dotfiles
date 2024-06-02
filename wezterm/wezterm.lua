@@ -1,5 +1,7 @@
 local wezterm = require("wezterm")
 
+local act = wezterm.action
+
 local config = {}
 
 config.default_prog = { "C:/Program Files/PowerShell/7/pwsh.exe" }
@@ -11,7 +13,12 @@ config.font_size = 12
 config.color_scheme = "batman"
 
 config.win32_system_backdrop = "Disable"
+
 config.window_background_opacity = 1
+
+config.window_close_confirmation = 'NeverPrompt'
+
+config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 
 config.use_fancy_tab_bar = true
 
@@ -77,65 +84,70 @@ config.leader = { key = "Space", mods = "SHIFT", timeout_milliseconds = 500 }
 
 config.keys = {
 	{
-		key = "+",
-		mods = "LEADER|SHIFT",
-		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+        key    = "H",
+		mods   = "LEADER|SHIFT",
+		action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
 	},
 	{
-		key = "_",
-		mods = "LEADER|SHIFT",
-		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+		key    = "V",
+		mods   = "LEADER|SHIFT",
+		action = act.SplitVertical({ domain = "CurrentPaneDomain" }),
 	},
 	{
-		key = ")",
-		mods = "LEADER|SHIFT",
-		action = wezterm.action.CloseCurrentPane({ domain = "CurrentPaneDomain", confirm = false }),
+		key    = "P",
+		mods   = "LEADER|SHIFT",
+		action = act.CloseCurrentPane({ domain = "CurrentPaneDomain", confirm = false }),
 	},
 	{
-		key = "UpArrow",
-		mods = "SHIFT|ALT",
-		action = wezterm.action.AdjustPaneSize({ "Up", 1 }),
+		key    = "UpArrow",
+		mods   = "SHIFT|ALT",
+		action = act.AdjustPaneSize({ "Up", 1 }),
 	},
 	{
-		key = "DownArrow",
-		mods = "SHIFT|ALT",
-		action = wezterm.action.AdjustPaneSize({ "Down", 1 }),
+		key    = "DownArrow",
+		mods   = "SHIFT|ALT",
+		action = act.AdjustPaneSize({ "Down", 1 }),
 	},
 	{
-		key = "RightArrow",
-		mods = "SHIFT|ALT",
-		action = wezterm.action.AdjustPaneSize({ "Right", 1 }),
+		key    = "RightArrow",
+		mods   = "SHIFT|ALT",
+		action = act.AdjustPaneSize({ "Right", 1 }),
 	},
 	{
-		key = "LeftArrow",
-		mods = "SHIFT|ALT",
-		action = wezterm.action.AdjustPaneSize({ "Left", 1 }),
+		key    = "LeftArrow",
+		mods   = "SHIFT|ALT",
+		action = act.AdjustPaneSize({ "Left", 1 }),
 	},
 	{
-		key = "UpArrow",
-		mods = "ALT",
-		action = wezterm.action.ActivatePaneDirection("Up"),
+		key    = "UpArrow",
+		mods   = "ALT",
+		action = act.ActivatePaneDirection("Up"),
 	},
 	{
-		key = "LeftArrow",
-		mods = "ALT",
-		action = wezterm.action.ActivatePaneDirection("Left"),
+		key    = "LeftArrow",
+		mods   = "ALT",
+		action = act.ActivatePaneDirection("Left"),
 	},
 	{
-		key = "RightArrow",
-		mods = "ALT",
-		action = wezterm.action.ActivatePaneDirection("Right"),
+		key    = "RightArrow",
+		mods   = "ALT",
+		action = act.ActivatePaneDirection("Right"),
 	},
 	{
-		key = "DownArrow",
-		mods = "ALT",
-		action = wezterm.action.ActivatePaneDirection("Down"),
+		key    = "DownArrow",
+		mods   = "ALT",
+		action = act.ActivatePaneDirection("Down"),
 	},
 	{
-		key = "F11",
-		mods = "",
-		action = wezterm.action.ToggleFullScreen,
+		key    = "F11",
+		mods   = "",
+		action = act.ToggleFullScreen,
 	},
+    {
+        key    = "W",
+        mods   = "LEADER|SHIFT",
+        action = act.QuitApplication,
+    },
 }
 
 return config
