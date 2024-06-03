@@ -1,4 +1,6 @@
-﻿
+﻿CapsLock::F13
+RAlt::F14
+AppsKey::CapsLock
 
 #If GetKeyState("F13")        
     ,::[
@@ -32,7 +34,6 @@
 	l::Right
 	v::Backspace
 	f::F11
-	RShift::CapsLock
 	r::0
 	q::1
 	w::2
