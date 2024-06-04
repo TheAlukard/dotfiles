@@ -14,7 +14,7 @@ config.color_scheme = "batman"
 
 config.win32_system_backdrop = "Disable"
 
-config.window_background_opacity = 1
+config.window_background_opacity = 0.0
 
 config.window_close_confirmation = 'NeverPrompt'
 

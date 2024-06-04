@@ -1,6 +1,7 @@
-﻿CapsLock::F13
-RAlt::F14
-AppsKey::CapsLock
+﻿#SingleInstance Force
+
+;CapsLock::F13
+;RAlt::F14
 
 #If GetKeyState("F13")        
     ,::[
