@@ -10,7 +10,7 @@ config.font = wezterm.font("JetBrains Mono")
 
 config.font_size = 12
 
-config.color_scheme = "batman"
+--config.color_scheme = "batman"
 
 config.win32_system_backdrop = "Disable"
 
@@ -143,10 +143,30 @@ config.keys = {
 		mods   = "",
 		action = act.ToggleFullScreen,
 	},
+    -- {
+    --     key    = "W",
+    --     mods   = "LEADER|SHIFT",
+    --     action = act.QuitApplication,
+    -- },
     {
-        key    = "W",
+        key    = "N",
         mods   = "LEADER|SHIFT",
-        action = act.QuitApplication,
+        action = act.SpawnTab 'CurrentPaneDomain',
+    },
+    {
+        key    = "RightArrow",
+        mods   = "SHIFT",
+        action = act.ActivateTabRelative(1),
+    },
+    {
+        key    = "LeftArrow",
+        mods   = "SHIFT",
+        action = act.ActivateTabRelative(-1),
+    },
+    {
+        key    = "K",
+        mods   = "LEADER|SHIFT",
+        action = act.ShowTabNavigator,
     },
 }
 

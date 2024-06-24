@@ -22,7 +22,7 @@
 	'::Send `%
 	[::Send 😂
 	Space::Esc
-	LAlt::Run "E:\Programs\Scoop\apps\wezterm\20240203-110809-5046fc22\wezterm-gui.exe"
+	LAlt::Run "E:\Programs\Scoop\apps\wezterm\20240203-110809-5046fc22\wezterm-gui.exe" 
 #If
 
 #If GetKeyState("F14") 
