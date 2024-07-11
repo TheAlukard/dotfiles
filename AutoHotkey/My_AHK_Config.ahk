@@ -1,6 +1,7 @@
 ﻿#SingleInstance Force
 
 RAlt::F14
+AppsKey::CapsLock
 
 *CapsLock::return
 
