@@ -20,7 +20,7 @@ config.window_close_confirmation = 'NeverPrompt'
 
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 
-config.use_fancy_tab_bar = true
+config.use_fancy_tab_bar = false
 
 config.enable_tab_bar = true
 
@@ -59,7 +59,7 @@ config.background = {
     },
     width   = "100%",
     height  = "100%",
-    opacity = 0.85
+    opacity = 0.8
   },
 }
 
