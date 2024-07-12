@@ -6,8 +6,9 @@ SetWorkingDir %A_ScriptDir%
 
 SetTimer, AutoReload, 3600000 
 
-RAlt::F14
 AppsKey::CapsLock
+
+*RAlt::return
 
 *CapsLock::return
 
@@ -36,7 +37,7 @@ AppsKey::CapsLock
 	[::Send 😂
 #If
 
-#If GetKeyState("F14", "P") 
+#If GetKeyState("RAlt", "P") 
 	i::Up
 	k::Down
 	j::Left
