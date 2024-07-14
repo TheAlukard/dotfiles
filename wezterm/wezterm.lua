@@ -4,6 +4,7 @@ local act = wezterm.action
 
 local config = {}
 
+-- config.default_prog = { "E:/Git/bin/bash.exe" }
 config.default_prog = { "C:/Program Files/PowerShell/7/pwsh.exe" }
 
 config.font = wezterm.font("JetBrains Mono")
