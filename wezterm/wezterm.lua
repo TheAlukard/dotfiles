@@ -155,13 +155,13 @@ config.keys = {
         action = act.SpawnTab 'CurrentPaneDomain',
     },
     {
-        key    = "RightArrow",
-        mods   = "SHIFT",
+        key    = "l",
+        mods   = "ALT",
         action = act.ActivateTabRelative(1),
     },
     {
-        key    = "LeftArrow",
-        mods   = "SHIFT",
+        key    = "h",
+        mods   = "ALT",
         action = act.ActivateTabRelative(-1),
     },
     {

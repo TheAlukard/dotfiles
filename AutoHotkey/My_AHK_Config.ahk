@@ -1,6 +1,7 @@
 ﻿#SingleInstance Force
 #NoEnv
 #Warn
+#MaxHotkeysPerInterval 200
 
 SetWorkingDir %A_ScriptDir%
 
@@ -54,10 +55,11 @@ AppsKey::CapsLock
 	z::7
 	x::8
 	c::9
+	m::Run "E:\Programming\C\WRun\build\wrun.exe"
 #If
 
 #If GetKeyState("LCtrl", "P")
-	LAlt & w::Run "E:\Programs\Scoop\apps\wezterm\20240203-110809-5046fc22\wezterm-gui.exe" 
+	LAlt & q::Run "E:\Programs\Scoop\apps\wezterm\20240203-110809-5046fc22\wezterm-gui.exe" 
 #If
 
 ;AutoReload:
