@@ -5,8 +5,6 @@
 
 SetWorkingDir %A_ScriptDir%
 
-;SetTimer, AutoReload, 3600000 
-
 AppsKey::CapsLock
 
 *RAlt::return
@@ -61,6 +59,3 @@ AppsKey::CapsLock
 #If GetKeyState("LCtrl", "P")
 	LAlt & q::Run "E:\Programs\Scoop\apps\wezterm\20240203-110809-5046fc22\wezterm-gui.exe" 
 #If
-
-;AutoReload:
-;reload 
