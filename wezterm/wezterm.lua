@@ -5,7 +5,8 @@ local act = wezterm.action
 local config = {}
 
 -- config.default_prog = { "E:/Git/bin/bash.exe" }
-config.default_prog = { "C:/Program Files/PowerShell/7/pwsh.exe" }
+-- config.default_prog = { "C:/Program Files/PowerShell/7/pwsh.exe" }
+config.default_prog = { "zsh" }
 
 config.font = wezterm.font("JetBrains Mono")
 
@@ -170,5 +171,14 @@ config.keys = {
         action = act.ShowTabNavigator,
     },
 }
+
+for i = 1, 8 do
+  -- CTRL+ALT + number to move to that position
+  table.insert(config.keys, {
+    key = tostring(i),
+    mods = 'ALT',
+    action = act.ActivateTab(i - 1),
+  })
+end
 
 return config

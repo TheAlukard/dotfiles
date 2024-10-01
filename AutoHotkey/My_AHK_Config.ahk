@@ -30,6 +30,7 @@ AppsKey::CapsLock
 	f::^
 	d::@
 	g::|
+	r::~
 	`;::_
 	Space::Esc
 	'::Send `%
