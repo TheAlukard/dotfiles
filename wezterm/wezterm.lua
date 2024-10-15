@@ -16,6 +16,8 @@ config.font_size = 12
 
 config.win32_system_backdrop = "Disable"
 
+config.audible_bell = 'Disabled'
+
 config.window_background_opacity = 0.0
 
 config.window_close_confirmation = 'NeverPrompt'

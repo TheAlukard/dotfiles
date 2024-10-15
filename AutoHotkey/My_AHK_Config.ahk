@@ -5,6 +5,10 @@
 
 SetWorkingDir %A_ScriptDir%
 
+if not A_IsAdmin
+    Run *RunAs "%A_ScriptFullPath%"
+return
+
 AppsKey::CapsLock
 
 *RAlt::return
@@ -31,6 +35,7 @@ AppsKey::CapsLock
 	d::@
 	g::|
 	r::~
+	e::"
 	`;::_
 	Space::Esc
 	'::Send `%
@@ -60,3 +65,8 @@ AppsKey::CapsLock
 #If GetKeyState("LCtrl", "P")
 	LAlt & q::Run "E:\Programs\Scoop\apps\wezterm\20240203-110809-5046fc22\wezterm-gui.exe" 
 #If
+
+#IfWinActive, DRAGON BALL Sparking! ZERO
+	XButton1::f
+	XButton2::e
+#IF
