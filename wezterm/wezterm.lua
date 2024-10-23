@@ -103,43 +103,43 @@ config.keys = {
 		action = act.CloseCurrentPane({ domain = "CurrentPaneDomain", confirm = false }),
 	},
 	{
-		key    = "UpArrow",
+		key    = "K",
 		mods   = "SHIFT|ALT",
 		action = act.AdjustPaneSize({ "Up", 1 }),
 	},
 	{
-		key    = "DownArrow",
+		key    = "J",
 		mods   = "SHIFT|ALT",
 		action = act.AdjustPaneSize({ "Down", 1 }),
 	},
 	{
-		key    = "RightArrow",
+		key    = "L",
 		mods   = "SHIFT|ALT",
 		action = act.AdjustPaneSize({ "Right", 1 }),
 	},
 	{
-		key    = "LeftArrow",
+		key    = "H",
 		mods   = "SHIFT|ALT",
 		action = act.AdjustPaneSize({ "Left", 1 }),
 	},
 	{
-		key    = "UpArrow",
-		mods   = "ALT",
+		key    = "K",
+		mods   = "CTRL|SHIFT",
 		action = act.ActivatePaneDirection("Up"),
 	},
 	{
-		key    = "LeftArrow",
-		mods   = "ALT",
+		key    = "H",
+		mods   = "CTRL|SHIFT",
 		action = act.ActivatePaneDirection("Left"),
 	},
 	{
-		key    = "RightArrow",
-		mods   = "ALT",
+		key    = "L",
+		mods   = "CTRL|SHIFT",
 		action = act.ActivatePaneDirection("Right"),
 	},
 	{
-		key    = "DownArrow",
-		mods   = "ALT",
+		key    = "J",
+		mods   = "CTRL|SHIFT",
 		action = act.ActivatePaneDirection("Down"),
 	},
 	{
@@ -157,16 +157,16 @@ config.keys = {
         mods   = "LEADER|SHIFT",
         action = act.SpawnTab 'CurrentPaneDomain',
     },
-    {
-        key    = "l",
-        mods   = "ALT",
-        action = act.ActivateTabRelative(1),
-    },
-    {
-        key    = "h",
-        mods   = "ALT",
-        action = act.ActivateTabRelative(-1),
-    },
+    -- {
+    --     key    = "l",
+    --     mods   = "ALT",
+    --     action = act.ActivateTabRelative(1),
+    -- },
+    -- {
+    --     key    = "h",
+    --     mods   = "ALT",
+    --     action = act.ActivateTabRelative(-1),
+    -- },
     {
         key    = "K",
         mods   = "LEADER|SHIFT",
@@ -175,10 +175,9 @@ config.keys = {
 }
 
 for i = 1, 8 do
-  -- CTRL+ALT + number to move to that position
   table.insert(config.keys, {
     key = tostring(i),
-    mods = 'ALT',
+    mods = 'CTRL|ALT',
     action = act.ActivateTab(i - 1),
   })
 end
