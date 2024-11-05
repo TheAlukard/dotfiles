@@ -11,8 +11,6 @@ return
 
 AppsKey::CapsLock
 
-*RAlt::return
-
 *CapsLock::return
 
 #If GetKeyState("CapsLock", "P")        
@@ -49,21 +47,29 @@ AppsKey::CapsLock
 	l::Right
 	v::Backspace
 	f::F11
-	r::0
-	q::1
-	w::2
-	e::3
-	a::4
-	s::5
-	d::6
-	z::7
-	x::8
-	c::9
-	m::Run "E:\Programming\C\WRun\build\wrun.exe"
+	LAlt & a::1
+	LAlt & s::2
+	LAlt & d::3
+	LAlt & f::4
+	LAlt & g::5
+	LAlt & h::6
+	LAlt & j::7
+	LAlt & k::8
+	LAlt & l::9
+	LAlt & `;::0
 #If
 
-#If GetKeyState("LCtrl", "P")
-	LAlt & q::Run "E:\Programs\Scoop\apps\wezterm\20240203-110809-5046fc22\wezterm-gui.exe" 
+#If GetKeyState("LAlt", "P") 
+	RAlt & a::1
+	RAlt & s::2
+	RAlt & d::3
+	RAlt & f::4
+	RAlt & g::5
+	RAlt & h::6
+	RAlt & j::7
+	RAlt & k::8
+	RAlt & l::9
+	RAlt & `;::0
 #If
 
 #IfWinActive, DRAGON BALL Sparking! ZERO
