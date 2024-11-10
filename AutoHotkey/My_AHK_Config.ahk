@@ -1,23 +1,18 @@
-﻿#SingleInstance Force
-#NoEnv
+﻿#Requires AutoHotkey >=2.0
+#SingleInstance Force
 #Warn
-#MaxHotkeysPerInterval 200
 
-SetWorkingDir %A_ScriptDir%
-
-if not A_IsAdmin
-    Run *RunAs "%A_ScriptFullPath%"
-return
+SetWorkingDir A_ScriptDir
 
 AppsKey::CapsLock
-
 *CapsLock::return
+*RAlt::return
 
-#If GetKeyState("CapsLock", "P")        
+#HotIf GetKeyState("CapsLock", "P")
     ,::[
 	.::]
-	j::{
-	k::}
+	j::Send("{Blind}{{}")
+	k::Send("{Blind}{}}")
 	l::-
 	o::\
 	u::(
@@ -36,43 +31,20 @@ AppsKey::CapsLock
 	e::"
 	`;::_
 	Space::Esc
-	'::Send `%
-	[::Send 😂
-#If
+	'::Send("{Blind}{%}")
+	[::Send("😂")
+#HotIf
 
-#If GetKeyState("RAlt", "P") 
+#HotIf GetKeyState("RAlt", "P")
 	i::Up
 	k::Down
 	j::Left
 	l::Right
 	v::Backspace
 	f::F11
-	LAlt & a::1
-	LAlt & s::2
-	LAlt & d::3
-	LAlt & f::4
-	LAlt & g::5
-	LAlt & h::6
-	LAlt & j::7
-	LAlt & k::8
-	LAlt & l::9
-	LAlt & `;::0
-#If
+#HotIf
 
-#If GetKeyState("LAlt", "P") 
-	RAlt & a::1
-	RAlt & s::2
-	RAlt & d::3
-	RAlt & f::4
-	RAlt & g::5
-	RAlt & h::6
-	RAlt & j::7
-	RAlt & k::8
-	RAlt & l::9
-	RAlt & `;::0
-#If
-
-#IfWinActive, DRAGON BALL Sparking! ZERO
+#HotIf WinActive("DRAGON BALL Sparking! ZERO")
 	XButton1::f
 	XButton2::e
 	;e::
@@ -84,4 +56,4 @@ AppsKey::CapsLock
 	;	Send, {w up}
 	;	Click, up
 	;}
-#IF
+#HotIf
