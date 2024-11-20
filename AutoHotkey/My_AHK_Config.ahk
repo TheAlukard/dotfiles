@@ -61,13 +61,4 @@ AppsKey::CapsLock
 #HotIf WinActive("DRAGON BALL Sparking! ZERO")
 	XButton1::f
 	XButton2::e
-	;e::
-	;{
-	;	Send, {w down}
-	;	Sleep, 15
-	;	Click, down
-	;	Sleep, 75
-	;	Send, {w up}
-	;	Click, up
-	;}
 #HotIf
