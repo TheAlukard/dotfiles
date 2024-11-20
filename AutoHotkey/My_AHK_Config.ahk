@@ -55,6 +55,7 @@ AppsKey::CapsLock
 	l::Right
 	v::Backspace
 	f::F11
+    w::Run("E:/Programming/C/wrun/build/wrun.exe")
 #HotIf
 
 #HotIf WinActive("DRAGON BALL Sparking! ZERO")

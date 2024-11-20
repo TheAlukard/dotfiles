@@ -4,6 +4,7 @@ map('t', '<Esc>', [[<C-\><C-n>]], {noremap=true})
 map('n', '<C-p>', "\"+p", {noremap=true})
 map('n', '<C-q>', "ZZ", {noremap=true})
 map({'i', 'c', 't'}, "<C-H>", "<C-w>", {noremap=true})
+map('n', '<leader> ', "<CMD>:Telescope find_files<CR>", {noremap=true})
 
 require('neoterm').setup({
 	clear_on_run = true,
