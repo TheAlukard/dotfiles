@@ -64,7 +64,7 @@
   tab  0    1    2    3    4    y    u    i    o    p    [    ]    \
   esc  5    6    7    8    9    h    j    @k    @l    @;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lalt           @spc            ralt comp rctl
+  lctl lalt           spc            ralt comp rctl
 )
 
 (deflayer gamelayer

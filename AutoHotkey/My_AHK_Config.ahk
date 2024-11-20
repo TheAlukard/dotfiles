@@ -39,8 +39,9 @@ AppsKey::CapsLock
 	f::^
 	d::@
 	g::|
-	r::~
-	e::"
+	r::"
+	e::~
+    t:::
 	`;::_
 	Space::Esc
 	'::Send("{Blind}{%}")
