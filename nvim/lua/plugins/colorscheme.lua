@@ -4,7 +4,9 @@ return {
 	opts = {
 		transparent = true,
 		styles = {
-			sidebars = "transparent",
+            comments = { italic = false },
+            keywords = { italic = false },
+            sidebars = "transparent",
 			floats = "transparent",
 		},
 	},

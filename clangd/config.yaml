@@ -1,0 +1,9 @@
+CompileFlags:
+  Compiler: gcc
+  Add: [-D_CRT_SECURE_NO_DEPRECATE]
+InlayHints:
+  BlockEnd: No
+  Designators: Yes
+  Enabled: No
+  ParameterNames: No
+  DeducedTypes: No

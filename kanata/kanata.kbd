@@ -19,14 +19,18 @@
   sym (layer-toggle symlayer)
   mov (layer-toggle movelayer)
   num (layer-toggle numlayer)
+  clean_l (layer-toggle clean_left)
+  clean_r (layer-toggle clean_right)
   gam (layer-switch gamelayer)
   def (layer-switch default)
- 
+
   a (tap-hold $tap-time $hold-time a lmet)
   s (tap-hold $tap-time $hold-time s lctl)
   d (tap-hold $tap-time $hold-time d lalt)
   f (tap-hold $tap-time $hold-time f @mov)
+  g (tap-hold $tap-time $hold-time g @clean_r)
   
+  h (tap-hold $tap-time $hold-time h @clean_l)
   j (tap-hold $tap-time $hold-time j @num)
   k (tap-hold $tap-time $hold-time k ralt)
   l (tap-hold $tap-time $hold-time l rctl)
@@ -38,7 +42,7 @@
 (deflayer default
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  esc  @a    @s    @d    @f    g    h    @j    @k    @l    @;    '    ret
+  esc  @a    @s    @d    @f    @g    @h    @j    @k    @l    @;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lalt           @spc            ralt @gam rctl
 )
@@ -73,4 +77,20 @@
   esc a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lalt           spc            ralt @def rctl
+)
+
+(deflayer clean_left
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  esc  a    s    d    f    g    h    @j    @k    @l    @;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lalt           @spc            ralt comp rctl
+)
+
+(deflayer clean_right
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  esc  @a    @s    @d    @f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lalt           @spc            ralt comp rctl
 )

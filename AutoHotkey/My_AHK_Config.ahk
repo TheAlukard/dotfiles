@@ -16,6 +16,9 @@ if not (A_IsAdmin)
     ExitApp
 }
 
+A_HotkeyInterval := 2000
+A_MaxHotkeysPerInterval := 200
+
 AppsKey::CapsLock
 *CapsLock::return
 *RAlt::return

@@ -30,16 +30,18 @@ function prog {
 }
 
 function activ_win {
-	pwsh -command 'irm https://get.activated.win | iex'
+    pwsh -command 'Start-Process "E:\Programs\Microsoft-Activation-Scripts-master\MAS\Separate-Files-Version\Activators\HWID_Activation.cmd" -WindowStyle Hidden'
 }
 
 function mkcd {
     mkdir -p "${1}" && cd "${1}"
 }
+
 function zig_init {
 	cp E:/Programming/zig/template/* . -r
 	sed -i -- "s/template/${PWD##*/}/g" build.zig
 }
+
 # --------------
 
 # Bindings
