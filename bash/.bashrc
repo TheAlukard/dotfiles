@@ -1,13 +1,9 @@
 # History Configuration
-HISTSIZE=5000
-HISTFILE=~/.zsh_history
-SAVEHIST=5000
-
-setopt appendhistory
-setopt sharehistory
-setopt incappendhistory
-setopt -h
-# --------------
+export HISTFILESIZE=
+export HISTSIZE=
+export HISTTIMEFORMAT="[%F %T] "
+export HISTFILE=~/.bash_eternal_history
+PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 # Aliases
 alias ni=touch
@@ -44,28 +40,8 @@ function zig_init {
 
 # --------------
 
-# Bindings
-bindkey -v
-setopt VI
-# bindkey -e
-# setopt EMACS
-bindkey "^[[1;5C" forward-word
-bindkey "^[[1;5D" backward-word
-bindkey "^H" backward-kill-word
-bindkey "TAB" menu-complete
-# --------------
+bind 'TAB:menu-complete'
+shopt -s cdspell
+bind "C-H:shell-backward-kill-word"
 
-# case insensitive path-completion
-autoload -Uz +X compinit && compinit
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
-zstyle ':completion:*' menu select
-# --------------
-
-# Variables
-TIMEFMT=$'real\t%E\nuser\t%U\nsys\t%S'
-# --------------
-
-# Startup
-# source /c/Users/pc/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# eval "$(starship init zsh)"
-# --------------
+eval "$(starship init bash)"

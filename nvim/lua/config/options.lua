@@ -8,7 +8,7 @@ opt.tabstop = 4
 opt.softtabstop = 2
 opt.relativenumber = true
 opt.wrap = true
-opt.shell = "E:/Programs/MSYS2/usr/bin/zsh.exe"
+opt.shell = "E:/Programs/MSYS2/usr/bin/bash.exe"
 opt.hidden = true
 opt.fillchars = { eob = " " }
 opt.ignorecase = true

@@ -65,3 +65,10 @@ AppsKey::CapsLock
 	XButton1::f
 	XButton2::e
 #HotIf
+
+#HotIf WinActive("Medina Mushaf")
+	XButton1::Left
+	XButton2::Right
+#HotIf
+
+LWin & m::Run("nircmd monitor off")

@@ -4,7 +4,7 @@ local act = wezterm.action
 
 local config = {}
 
-config.default_prog = { "E:/Programs/MSYS2/usr/bin/zsh.exe" }
+config.default_prog = { "E:/Programs/MSYS2/usr/bin/bash.exe" }
 
 config.font = wezterm.font("JetBrains Mono")
 

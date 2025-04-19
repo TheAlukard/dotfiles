@@ -1,8 +1,11 @@
 local map  = vim.keymap.set
+local del  = vim.keymap.del
 
 map('t', '<Esc>', [[<C-\><C-n>]], {noremap=true})
 map('n', '<C-p>', "\"+p", {noremap=true})
 map('n', '<C-q>', "ZZ", {noremap=true})
+del('n', 'j')
+del('n', 'k')
 map({'i', 'c', 't'}, "<C-H>", "<C-w>", {noremap=true})
 
 require('neoterm').setup({
