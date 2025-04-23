@@ -1,8 +1,15 @@
-# History Configuration
+# Variables
 export HISTTIMEFORMAT="[%F %T] "
 export HISTFILE=~/.bash_eternal_history
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 PS1="\033[32m\\w \\$\033[37m "
+# --------------
+
+#Options
+bind 'TAB:menu-complete'
+shopt -s cdspell
+bind "C-H:shell-backward-kill-word"
+# --------------
 
 # Aliases
 alias ni=touch
@@ -36,11 +43,6 @@ function zig_init {
 	cp E:/Programming/zig/template/* . -r
 	sed -i -- "s/template/${PWD##*/}/g" build.zig
 }
-
 # --------------
-
-bind 'TAB:menu-complete'
-shopt -s cdspell
-bind "C-H:shell-backward-kill-word"
 
 # eval "$(starship init bash)"
