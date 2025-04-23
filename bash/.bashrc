@@ -1,9 +1,8 @@
 # History Configuration
-export HISTFILESIZE=
-export HISTSIZE=
 export HISTTIMEFORMAT="[%F %T] "
 export HISTFILE=~/.bash_eternal_history
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+PS1="\033[32m\\w \\$\033[37m "
 
 # Aliases
 alias ni=touch
@@ -44,4 +43,4 @@ bind 'TAB:menu-complete'
 shopt -s cdspell
 bind "C-H:shell-backward-kill-word"
 
-eval "$(starship init bash)"
+# eval "$(starship init bash)"
