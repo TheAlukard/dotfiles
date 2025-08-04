@@ -26,10 +26,10 @@ config.enable_tab_bar = true
 config.use_fancy_tab_bar = false
 
 config.window_padding = {
-    left   = 10,
-    right  = 10,
-    top    = 10,
-    bottom = 10,
+    left   = 0,
+    right  = 0,
+    top    = 0,
+    bottom = 0,
 }
 
 local wallpaper_path = "E:/Photos/Wallpapers/"

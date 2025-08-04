@@ -20,6 +20,7 @@ A_HotkeyInterval := 2000
 A_MaxHotkeysPerInterval := 200
 
 AppsKey::CapsLock
+LAlt & Enter::Run("E:\Programming\C\wrun\build\wrun.exe")
 *CapsLock::return
 *RAlt::return
 
@@ -52,13 +53,12 @@ AppsKey::CapsLock
 #HotIf
 
 #HotIf GetKeyState("RAlt", "P")
+	v::Backspace
+	f::F11
 	i::Up
 	k::Down
 	j::Left
 	l::Right
-	v::Backspace
-	f::F11
-    w::Run("E:/Programming/C/wrun/build/wrun.exe")
 #HotIf
 
 #HotIf WinActive("DRAGON BALL Sparking! ZERO")
