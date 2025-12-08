@@ -45,7 +45,7 @@ config.background = {
   },
   {
     source = {
-      File = wallpaper_path .. "Wallpaper268.png",
+      File = wallpaper_path .. "Wallpaper304.jpg",
     },
 
     hsb = {

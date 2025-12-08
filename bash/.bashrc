@@ -43,6 +43,9 @@ function zig_init {
 	cp E:/Programming/zig/template/* . -r
 	sed -i -- "s/template/${PWD##*/}/g" build.zig
 }
-# --------------
 
-# eval "$(starship init bash)"
+function symlink {
+    pwsh -command "New-Item -Path " $2" -Value " $1 " -ItemType SymbolicLink"
+}
+
+# --------------

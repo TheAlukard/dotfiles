@@ -20,7 +20,6 @@ A_HotkeyInterval := 2000
 A_MaxHotkeysPerInterval := 200
 
 AppsKey::CapsLock
-LAlt & Enter::Run("E:\Programming\C\wrun\build\wrun.exe")
 *CapsLock::return
 *RAlt::return
 
@@ -48,6 +47,7 @@ LAlt & Enter::Run("E:\Programming\C\wrun\build\wrun.exe")
     t:::
 	`;::_
 	Space::Esc
+	Enter::Run("E:\Programming\C\wrun\build\wrun.exe")
 	'::Send("{Blind}{%}")
 	[::Send("😂")
 #HotIf
@@ -70,5 +70,3 @@ LAlt & Enter::Run("E:\Programming\C\wrun\build\wrun.exe")
 	XButton1::Left
 	XButton2::Right
 #HotIf
-
-LWin & m::Run("nircmd monitor off")
