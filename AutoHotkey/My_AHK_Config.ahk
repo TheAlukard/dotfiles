@@ -47,7 +47,8 @@ AppsKey::CapsLock
     t:::
 	`;::_
 	Space::Esc
-	Enter::Run("E:\Programming\C\wrun\build\wrun.exe")
+    s::^+`
+	Enter::Run("D:\Programming\C\wrun\build\wrun.exe")
 	'::Send("{Blind}{%}")
 	[::Send("😂")
 #HotIf

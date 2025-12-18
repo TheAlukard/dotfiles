@@ -4,7 +4,7 @@ local act = wezterm.action
 
 local config = {}
 
-config.default_prog = { "E:/Programs/MSYS2/usr/bin/bash.exe" }
+config.default_prog = {"wsl"}
 
 config.font = wezterm.font("JetBrains Mono")
 
@@ -22,7 +22,7 @@ config.window_close_confirmation = 'NeverPrompt'
 
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 
-config.enable_tab_bar = true
+config.enable_tab_bar = false
 config.use_fancy_tab_bar = false
 
 config.window_padding = {
@@ -32,7 +32,7 @@ config.window_padding = {
     bottom = 0,
 }
 
-local wallpaper_path = "E:/Photos/Wallpapers/"
+local wallpaper_path = "D:/Photos/Wallpapers/"
 
 config.background = {
   {
@@ -41,7 +41,7 @@ config.background = {
     },
     width   = "100%",
     height  = "100%",
-    opacity = 1.0
+    opacity = 0.0,
   },
   {
     source = {
@@ -83,62 +83,62 @@ config.colors = {
 	},
 }
 
-config.leader = { key = "Space", mods = "SHIFT", timeout_milliseconds = 500 }
+config.leader = { key = "`", mods = "SHIFT|CTRL", timeout_milliseconds = 500 }
 
 config.keys = {
 	{
-        key    = "H",
+        key    = ")",
 		mods   = "LEADER|SHIFT",
 		action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
 	},
 	{
-		key    = "V",
+		key    = "(",
 		mods   = "LEADER|SHIFT",
 		action = act.SplitVertical({ domain = "CurrentPaneDomain" }),
 	},
 	{
-		key    = "P",
-		mods   = "LEADER|SHIFT",
+		key    = "\\",
+		mods   = "LEADER",
 		action = act.CloseCurrentPane({ domain = "CurrentPaneDomain", confirm = false }),
 	},
 	{
-		key    = "K",
-		mods   = "SHIFT|ALT",
+		key    = "}",
+		mods   = "LEADER|SHIFT|ALT",
 		action = act.AdjustPaneSize({ "Up", 1 }),
 	},
 	{
-		key    = "J",
-		mods   = "SHIFT|ALT",
+		key    = "{",
+		mods   = "LEADER|SHIFT|ALT",
 		action = act.AdjustPaneSize({ "Down", 1 }),
 	},
 	{
-		key    = "L",
-		mods   = "SHIFT|ALT",
+		key    = "-",
+		mods   = "LEADER|ALT",
 		action = act.AdjustPaneSize({ "Right", 1 }),
 	},
 	{
-		key    = "H",
-		mods   = "SHIFT|ALT",
+		key    = "*",
+		mods   = "LEADER|SHIFT|ALT",
 		action = act.AdjustPaneSize({ "Left", 1 }),
 	},
 	{
-		key    = "K",
-		mods   = "CTRL|SHIFT",
+		key    = "}",
+		mods   = "LEADER|SHIFT",
 		action = act.ActivatePaneDirection("Up"),
 	},
 	{
-		key    = "H",
-		mods   = "CTRL|SHIFT",
+		key    = "*",
+		mods   = "LEADER|SHIFT",
 		action = act.ActivatePaneDirection("Left"),
 	},
 	{
-		key    = "L",
-		mods   = "CTRL|SHIFT",
+		key    = "-",
+		mods   = "LEADER",
 		action = act.ActivatePaneDirection("Right"),
 	},
 	{
-		key    = "J",
-		mods   = "CTRL|SHIFT",
+		key    = "{",
+		mods   = "LEADER|SHIFT",
 		action = act.ActivatePaneDirection("Down"),
 	},
 	{
@@ -152,25 +152,25 @@ config.keys = {
     --     action = act.QuitApplication,
     -- },
     {
-        key    = "N",
+        key    = "$",
         mods   = "LEADER|SHIFT",
         action = act.SpawnTab 'CurrentPaneDomain',
     },
-    {
-        key    = "l",
-        mods   = "ALT",
-        action = act.ActivateTabRelative(1),
-    },
-    {
-        key    = "h",
-        mods   = "ALT",
-        action = act.ActivateTabRelative(-1),
-    },
-    {
-        key    = "K",
-        mods   = "LEADER|SHIFT",
-        action = act.ShowTabNavigator,
-    },
+    -- {
+--         key    = "l",
+--         mods   = "ALT",
+--         action = act.ActivateTabRelative(1),
+--     },
+--     {
+--         key    = "h",
+--         mods   = "ALT",
+--         action = act.ActivateTabRelative(-1),
+--     },
+--     {
+--         key    = "K",
+--         mods   = "LEADER|SHIFT",
+--         action = act.ShowTabNavigator,
+--     },
 }
 
 for i = 1, 8 do
