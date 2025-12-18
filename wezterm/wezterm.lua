@@ -83,7 +83,7 @@ config.colors = {
 	},
 }
 
-config.leader = { key = "`", mods = "SHIFT|CTRL", timeout_milliseconds = 500 }
+config.leader = { key = "~", mods = "SHIFT|CTRL", timeout_milliseconds = 500 }
 
 config.keys = {
 	{
