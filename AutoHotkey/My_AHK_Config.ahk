@@ -20,7 +20,7 @@ A_HotkeyInterval := 2000
 A_MaxHotkeysPerInterval := 200
 
 AppsKey::CapsLock
-*RAlt::return
+*RAlt::Return
 *CapsLock::Return
 
 #HotIf GetKeyState("CapsLock", "P")
@@ -48,7 +48,7 @@ AppsKey::CapsLock
 	`;::_
 	Space::Esc
 	s::^+!Space
-	Enter::Run("D:\Programming\C\wrun\build\wrun.exe")
+	;Enter::Run("D:\Programming\C\wrun\build\wrun.exe")
 	'::Send("{Blind}{%}")
 	[::Send("😂")
 #HotIf
