@@ -4,7 +4,7 @@ local act = wezterm.action
 
 local config = {}
 
-config.default_prog = {"wsl"}
+config.default_prog = {"D:/Programs/Scoop/shims/mingw64.cmd"}
 
 config.font = wezterm.font("JetBrains Mono")
 
@@ -43,19 +43,19 @@ config.background = {
     height  = "100%",
     opacity = 0.0,
   },
-  {
-    source = {
-      File = wallpaper_path .. "Wallpaper304.jpg",
-    },
-
-    hsb = {
-        brightness = 1.0,
-        hue        = 1.0,
-        saturation = 1.0,
-    },
-
-    opacity = 1.0,
-  },
+  -- {
+  --   source = {
+  --     File = wallpaper_path .. "Wallpaper304.jpg",
+  --   },
+  --
+  --   hsb = {
+  --       brightness = 1.0,
+  --       hue        = 1.0,
+  --       saturation = 1.0,
+  --   },
+  --
+  --   opacity = 1.0,
+  -- },
   {
     source = {
       Color = '#000000'
