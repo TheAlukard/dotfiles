@@ -8,7 +8,7 @@ opt.tabstop = 4
 opt.softtabstop = 2
 opt.relativenumber = true
 opt.wrap = true
-opt.shell = "D:/Programs/Scoop/apps/msys2/2025-12-13/usr/bin/bash.exe"
+opt.shell = "D:\\Programs\\Scoop\\apps\\msys2\\2025-12-13\\usr\\bin\\bash.exe"
 opt.hidden = true
 opt.fillchars = { eob = " " }
 opt.ignorecase = true

@@ -1,6 +1,5 @@
 return {
     "nvim-telescope/telescope.nvim",
-    lazy = false,
     opts = {
         defaults = {
             mappings = {
@@ -12,7 +11,7 @@ return {
     },
     keys = {
         {
-            "<leader><space>",
+            "<leader> ",
             function()
                 require("telescope.builtin").find_files()
             end,

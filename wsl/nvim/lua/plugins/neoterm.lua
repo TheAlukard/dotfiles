@@ -1,0 +1,3 @@
+return {
+    'itmecho/neoterm.nvim',
+}

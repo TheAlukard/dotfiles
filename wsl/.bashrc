@@ -2,7 +2,7 @@
 export HISTTIMEFORMAT="[%F %T] "
 export HISTFILE=~/.bash_eternal_history
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
-#PS1="\033[32m\\w \\$\033[37m "
+PS1="\033[32m\\w \\$\033[37m "
 # --------------
 
 #Options
@@ -23,4 +23,9 @@ alias ls='ls -la'
 function mkcd {
     mkdir -p "${1}" && cd "${1}"
 }
+# --------------
+
+# Commands
+cd ~
+clear
 # --------------
