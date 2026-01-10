@@ -1,0 +1,91 @@
+{
+    /* Editor Settings */
+    "editor.minimap.enabled": false,
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingComments": "never",
+    "editor.autoClosingQuotes": "never",
+    "editor.inlayHints.enabled": "off",
+    "editor.bracketPairColorization.enabled": false,
+    "editor.semanticHighlighting.enabled": false,
+    "editor.matchBrackets": "near",
+    /* ------------------------- */
+    /* Font Settings */
+    "editor.fontFamily": "Cascadia Code",
+    "editor.fontSize": 16,
+    "editor.fontLigatures": true,
+    "oneDarkPro.italic": false,
+    "catppuccin.italicKeywords": false,
+    "catppuccin.italicComments": false,
+    /* ------------------------- */
+
+    /* Syntax Highlighting */
+    "editor.tokenColorCustomizations": {
+        "comments": "#6A737D",
+        "keywords": "#FCA7EA",
+        "strings": "#C3E88D",
+        "variables": "#C8D3F5",
+        "functions": "#80A7FB",
+        "numbers": "#FF966C",
+        "types": "#65BCFF",
+    },
+    /* ------------------------- */
+    /* Vim Settings */
+    "vim.smartRelativeLine": true,
+    "vim.ignorecase": true,
+    "vim.useSystemClipboard": true,
+    "vim.leader": " ",
+    /* ------------------------- */
+    /* Vim Bindings */
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "<leader>",
+                " "
+            ],
+            "commands": [
+                "workbench.action.quickOpen",
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "<leader>",
+                "g"
+            ],
+            "commands": [
+                "workbench.action.terminal.toggleTerminal",
+                {
+                    "command": "workbench.action.terminal.sendSequence",
+                    "args": {
+                        "text": "lazygit\u000D"
+                    },
+                },
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "<S-l>"
+            ],
+            "commands": [
+                "workbench.action.nextEditor",
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "<S-h>"
+            ],
+            "commands": [
+                "workbench.action.previousEditor",
+            ],
+            "silent": true
+        },
+    ],
+    /* ------------------------- */
+    /* Miscellaneous */
+    "codesnap.showWindowTitle": true,
+    "window.menuBarVisibility": "compact",
+    "workbench.colorTheme": "One Dark Pro Darker",
+    /* ------------------------- */
+}
