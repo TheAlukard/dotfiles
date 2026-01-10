@@ -5,7 +5,7 @@ return {
         defaults = {
             mappings = {
                 i = {
-                    ["<Esc>"] = "close", -- preferred simple form
+                    ["<Esc>"] = "close",
                 },
             },
         },

@@ -1,8 +1,8 @@
-# Variables
-export HISTTIMEFORMAT="[%F %T] "
-export HISTFILE=~/.bash_eternal_history
+# History Configuration
+HISTTIMEFORMAT="[%F %T] "
+HISTFILE=~/.bash_eternal_history
+HISTCONTROL=ignoredups
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
-#PS1="\033[32m\\w \\$\033[37m "
 # --------------
 
 #Options
@@ -12,11 +12,18 @@ bind 'set completion-ignore-case on'
 bind 'set enable-bracketed-paste off'
 # --------------
 
+# Variables
+EDITOR=nvim
+# PS1="\033[32m\\w \\$\033[37m "
+# --------------
+
 # Aliases
-alias cls=clear
-alias vim=nvim
-alias py=python
-alias ls='ls -la'
+alias cls='clear'
+alias py='python'
+alias vim='/usr/bin/nvim'
+alias vi='/usr/bin/vim'
+alias v='/usr/bin/vi'
+alias ls='ls -AX'
 # --------------
 
 # Functions
@@ -24,3 +31,5 @@ function mkcd {
     mkdir -p "${1}" && cd "${1}"
 }
 # --------------
+
+# eval "$(oh-my-posh init bash)"

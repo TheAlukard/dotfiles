@@ -1,11 +1,8 @@
-CompileFlags:
-  Compiler: gcc
-  Add: [-D_CRT_SECURE_NO_DEPRECATE, -ID:/Programs/Apps/mingw/15.2.0-rt_v13-rev0/x86_64-w64-mingw32/include] 
 InlayHints:
-  BlockEnd: No
-  Designators: Yes
-  Enabled: Yes
-  ParameterNames: No
-  DeducedTypes: No
-Diagnostics:
-    Suppress: ["invalid_token_after_toplevel_declarator"]
+  Enabled: false
+  BlockEnd: false
+  Designators: true
+  ParameterNames: true
+  DeducedTypes: true
+  DefaultArguments: false
+  TypeNameLimit: 24

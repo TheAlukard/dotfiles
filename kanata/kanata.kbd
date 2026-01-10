@@ -10,87 +10,31 @@
   lctl lalt           spc            ralt comp rctl
 )
 
-(defvar
-  tap-time 200
-  hold-time 200
-)
-
 (defalias
   sym (layer-toggle symlayer)
   mov (layer-toggle movelayer)
-  num (layer-toggle numlayer)
-  clean_l (layer-toggle clean_left)
-  clean_r (layer-toggle clean_right)
-  gam (layer-switch gamelayer)
-  def (layer-switch default)
-
-  a (tap-hold $tap-time $hold-time a lmet)
-  s (tap-hold $tap-time $hold-time s lctl)
-  d (tap-hold $tap-time $hold-time d lalt)
-  f (tap-hold $tap-time $hold-time f @mov)
-  g (tap-hold $tap-time $hold-time g @clean_r)
-  
-  h (tap-hold $tap-time $hold-time h @clean_l)
-  j (tap-hold $tap-time $hold-time j @num)
-  k (tap-hold $tap-time $hold-time k ralt)
-  l (tap-hold $tap-time $hold-time l rctl)
-  ; (tap-hold $tap-time $hold-time ; rmet)
-  
-  spc (tap-hold $tap-time $hold-time spc @sym)
 )
 
 (deflayer default
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  esc  @a    @s    @d    @f    @g    @h    @j    @k    @l    @;    '    ret
+  @sym  a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lalt           @spc            ralt @gam rctl
+  lctl lalt           spc            @mov caps rctl
 )
 
 (deflayer symlayer
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    S-`    S-'    S-;    S-7    S-9   S-0    \    =    [    ]    \
-  esc  a    s    S-2    S-6    S-\    S-8    S-[    S-]    -    S--    S-5    ret
+  tab  q    w    S-`    S-'    S-;    S-7    S-9   S-0    \    =    (unicode 😂)    ]    \
+  @sym  a    s    S-2    S-6    S-\    S-8    S-[    S-]    -    S--    S-5    ret
   lsft z    x    c    S-=    S-/    S-4    S-3    [    ]    S-1    rsft
-  lctl lalt           spc           ralt caps rctl
+  lctl lalt           esc           @mov caps rctl
 )
 
 (deflayer movelayer
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    i    bspc    p    [    ]    \
-  esc  @a   @s    @d    f    g    left    down    up    right    ;    '    ret
+  tab  q    w    e    r    t    y    u    up    bspc    p    [    ]    \
+  @sym  a   s    d    f    g    h    left    down    right    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lalt           spc            ralt comp rctl
-)
-
-(deflayer numlayer
-  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  0    1    2    3    4    y    u    i    o    p    [    ]    \
-  esc  5    6    7    8    9    h    j    @k    @l    @;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lalt           spc            ralt comp rctl
-)
-
-(deflayer gamelayer
-  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  esc a    s    d    f    g    h    j    k    l    ;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lalt           spc            ralt @def rctl
-)
-
-(deflayer clean_left
-  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  esc  a    s    d    f    g    h    @j    @k    @l    @;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lalt           @spc            ralt comp rctl
-)
-
-(deflayer clean_right
-  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  esc  @a    @s    @d    @f    g    h    j    k    l    ;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lalt           @spc            ralt comp rctl
+  lctl lalt           spc            @mov caps rctl
 )

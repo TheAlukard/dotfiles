@@ -6,7 +6,8 @@ map('n', '<C-p>', "\"+p", {noremap=true})
 map('n', '<C-q>', "ZZ", {noremap=true})
 del('n', 'j')
 del('n', 'k')
-map({'i', 'c', 't'}, "<C-H>", "<C-w>", {noremap=true})
+map({'i', 'c', 't'}, "<C-backspace>", "<C-w>", {noremap=true})
+vim.api.nvim_set_keymap("n", "<leader>h", "<CMD>:lua require('nvim-highlight-colors').toggle()<CR>", {})
 
 require('neoterm').setup({
 	clear_on_run = true,
@@ -16,18 +17,6 @@ require('neoterm').setup({
 	height = 1,
 })
 
-vim.api.nvim_set_keymap("i", "<C-_>", "<C-o>:NeotermToggle<CR>", {})
-vim.api.nvim_set_keymap("t", "<C-_>", "<CMD>:NeotermToggle<CR>", {})
-vim.api.nvim_set_keymap("n", "<C-_>", "<CMD>:NeotermToggle<CR>", {})
-
-local actions = require("telescope.actions")
-
-require("telescope").setup({
-    defaults = {
-        mappings = {
-            i = {
-                ["<Esc>"] = actions.close,
-            },
-        },
-    },
-})
+vim.api.nvim_set_keymap("i", "<C-/>", "<C-o>:NeotermToggle<CR>", {})
+vim.api.nvim_set_keymap("t", "<C-/>", "<CMD>:NeotermToggle<CR>", {})
+vim.api.nvim_set_keymap("n", "<C-/>", "<CMD>:NeotermToggle<CR>", {})

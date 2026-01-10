@@ -1,3 +1,0 @@
-return {
-    'itmecho/neoterm.nvim',
-}
