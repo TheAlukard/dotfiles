@@ -24,6 +24,7 @@ alias vim='/usr/bin/nvim'
 alias vi='/usr/bin/vim'
 alias v='/usr/bin/vi'
 alias ls='ls -AX'
+alias ff='fastfetch'
 # --------------
 
 # Functions
