@@ -17,8 +17,8 @@ wezterm_target="$HOME/.wezterm.lua"
 vscodium_target="$HOME/.config/VSCodium/User"
 
 function symlink {
-    echo "linking '$1' to '$2'"
     ln -snf $1 $2
+    echo "linked '$1' to '$2'"
 }
 
 symlink $bash_path $bash_target
