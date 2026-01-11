@@ -7,6 +7,7 @@ kitty_path="$PWD/kitty"
 nvim_path="$PWD/nvim"
 wezterm_path="$PWD/wezterm/.wezterm.lua"
 vscodium_path="$PWD/vscodium"
+fastfetch_path="$PWD/fastfetch"
 
 bash_target="$HOME/.bashrc"
 clangd_target="$HOME/.config/clangd"
@@ -15,6 +16,7 @@ kitty_target="$HOME/.config/kitty"
 nvim_target="$HOME/.config/nvim"
 wezterm_target="$HOME/.wezterm.lua"
 vscodium_target="$HOME/.config/VSCodium/User"
+fastfetch_target="$HOME/.config/fastfetch"
 
 function symlink {
     ln -snf $1 $2
@@ -35,3 +37,5 @@ symlink $wezterm_path $wezterm_target
 
 symlink $vscodium_path"/settings.json" $vscodium_target"/settings.json"
 symlink $vscodium_path"/keybindings.json" $vscodium_target"/keybindings.json"
+
+symlink $fastfetch_path $fastfetch_target
