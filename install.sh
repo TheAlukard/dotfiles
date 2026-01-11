@@ -5,7 +5,8 @@ function symlink {
     echo "linked '$1' to '$2'"
 }
 
-DIR="$HOME/dotfiles" 
+SCRIPT_PATH=$(realpath $0)
+DIR=$(dirname $SCRIPT_PATH)
 
 bash_path="$DIR/bash/.bashrc"
 clangd_path="$DIR/clangd"
