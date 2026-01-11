@@ -1,13 +1,20 @@
 #!/bin/bash
 
-bash_path="$PWD/bash/.bashrc"
-clangd_path="$PWD/clangd"
-kanata_path="$PWD/kanata/kanata.kbd"
-kitty_path="$PWD/kitty"
-nvim_path="$PWD/nvim"
-wezterm_path="$PWD/wezterm/.wezterm.lua"
-vscodium_path="$PWD/vscodium"
-fastfetch_path="$PWD/fastfetch"
+function symlink {
+    ln -snf $1 $2
+    echo "linked '$1' to '$2'"
+}
+
+DIR="$HOME/dotfiles" 
+
+bash_path="$DIR/bash/.bashrc"
+clangd_path="$DIR/clangd"
+kanata_path="$DIR/kanata/kanata.kbd"
+kitty_path="$DIR/kitty"
+nvim_path="$DIR/nvim"
+wezterm_path="$DIR/wezterm/.wezterm.lua"
+vscodium_path="$DIR/vscodium"
+fastfetch_path="$DIR/fastfetch"
 
 bash_target="$HOME/.bashrc"
 clangd_target="$HOME/.config/clangd"
@@ -17,11 +24,6 @@ nvim_target="$HOME/.config/nvim"
 wezterm_target="$HOME/.wezterm.lua"
 vscodium_target="$HOME/.config/VSCodium/User"
 fastfetch_target="$HOME/.config/fastfetch"
-
-function symlink {
-    ln -snf $1 $2
-    echo "linked '$1' to '$2'"
-}
 
 symlink $bash_path $bash_target
 
