@@ -30,8 +30,8 @@ return {
 
         hl(0, "@function.macro", {link = "@constant.macro"})
 
-        hl(0, "@keyword", {fg = colors.keywords, force = true})
-        hl(0, "@type", {fg = colors.types, force = true})
+        hl(0, "@keyword",  {fg = colors.keywords, force = true})
+        hl(0, "@type",     {fg = colors.types, force = true})
         hl(0, "@constant", {fg = colors.constants, force = true})
         hl(0, "@variable", {fg = colors.variables, force = true})
         hl(0, "@constant.macro", {fg = colors.macros, force = true})
