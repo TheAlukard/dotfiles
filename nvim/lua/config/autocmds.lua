@@ -8,13 +8,12 @@ vim.api.nvim_create_autocmd("FileType", {
   callback = highlights.c_hl,
 })
 
-vim.api.nvim_create_autocmd("LspAttach", { -- Disable Lsp semantic highlighting
-callback = function(args)
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(args)
     local client = vim.lsp.get_client_by_id(args.data.client_id)
-    if client then
-    -- This effectively removes the highest priority layer
-    client.server_capabilities.semanticTokensProvider = nil
+    if client and client.server_capabilities.semanticTokensProvider then
+      client.server_capabilities.semanticTokensProvider = nil
     end
-end,
+  end,
 })
 
