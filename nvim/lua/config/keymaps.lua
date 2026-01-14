@@ -1,7 +1,6 @@
 local map  = vim.keymap.set
 local del  = vim.keymap.del
 
-vim.g.mapleader = " "
 map('t', '<Esc>', [[<C-\><C-n>]], {noremap=true})
 map('n', '<C-p>', "\"+p", {noremap=true})
 map('n', '<C-q>', "ZZ", {noremap=true})
