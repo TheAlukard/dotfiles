@@ -4,7 +4,7 @@
 local highlights = require("config.highlights")
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "c", "cpp"},
+  pattern = { "*", "c", "cpp"},
   callback = highlights.c_hl,
 })
 

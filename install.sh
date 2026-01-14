@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function symlink {
+function slink {
     ln -snf $1 $2
     echo "linked '$1' to '$2'"
 }
@@ -26,19 +26,19 @@ wezterm_target="$HOME/.wezterm.lua"
 vscodium_target="$HOME/.config/VSCodium/User"
 fastfetch_target="$HOME/.config/fastfetch"
 
-symlink $bash_path $bash_target
+slink $bash_path $bash_target
 
-symlink $clangd_path $clangd_target
+slink $clangd_path $clangd_target
 
-symlink $kanata_path $kanata_target
+slink $kanata_path $kanata_target
 
-symlink $kitty_path $kitty_target
+slink $kitty_path $kitty_target
 
-symlink $nvim_path $nvim_target
+slink $nvim_path $nvim_target
 
-symlink $wezterm_path $wezterm_target
+slink $wezterm_path $wezterm_target
 
-symlink $vscodium_path"/settings.json" $vscodium_target"/settings.json"
-symlink $vscodium_path"/keybindings.json" $vscodium_target"/keybindings.json"
+slink $vscodium_path"/settings.json" $vscodium_target"/settings.json"
+slink $vscodium_path"/keybindings.json" $vscodium_target"/keybindings.json"
 
-symlink $fastfetch_path $fastfetch_target
+slink $fastfetch_path $fastfetch_target
