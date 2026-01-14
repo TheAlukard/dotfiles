@@ -9,13 +9,11 @@ return {
                 },
             },
         },
-    },
-    keys = {
-        {
-            "<leader><space>",
-            function()
-                require("telescope.builtin").find_files()
-            end,
+        pickers = {
+            find_files = {
+                hidden = true,
+                no_ignore = true,
+            },
         },
     },
 }
