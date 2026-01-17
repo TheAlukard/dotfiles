@@ -1,13 +1,6 @@
 vim.g.mapleader = " "
 
 require("config.lazy")
-require('neoterm').setup({
-    clear_on_run = true,
-    position = 'fullscreen',
-    noinsert = false,
-    width = 0.5,
-    height = 1,
-})
 
 if vim.g.neovide then
     vim.g.neovide_cursor_vfx_mode = ""
