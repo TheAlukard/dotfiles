@@ -8,4 +8,4 @@ InlayHints:
   TypeNameLimit: 24
 
 Diagnostics:
-  Suppress: [-Wformat, -Wunused]
+  Suppress: "*"
