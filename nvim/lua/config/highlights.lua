@@ -3,9 +3,9 @@ local colors = {
     keywords  = "#ddc9c0",
     types     = "#8ecae6",
     constants = "#f4978e",
-    variables = "#ffffef",
+    variables = "#eeeeee",
     macros    = "#f4978e",
-    functions = "#a4c3b2",
+    functions = "#afe3b2",
     numbers   = "#dad7cd",
     strings   = "#c3e88d",
 }
