@@ -7,12 +7,14 @@
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lalt           spc            ralt comp rctl
+  lctl lmet lalt           spc            ralt comp rctl
 )
 
 (defalias
   sym (layer-toggle symlayer)
   mov (layer-toggle movelayer)
+  metesc (multi (layer-while-held metlayer) lmet)
+  met (tap-hold 150 150 esc @metesc)
 )
 
 (deflayer default
@@ -20,7 +22,7 @@
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   @sym  a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lalt           spc            @mov caps rctl
+  lctl lmet lalt           spc            @mov caps rctl
 )
 
 (deflayer symlayer
@@ -28,7 +30,7 @@
   tab  q    w    S-`    S-'    S-;    S-7    S-9   S-0    \    =    (unicode 😂)    ]    \
   @sym  a    s    S-2    S-6    S-\    S-8    S-[    S-]    -    S--    S-5    ret
   lsft z    x    c    S-=    S-/    S-4    S-3    [    ]    S-1    rsft
-  lctl lalt           esc           @mov caps rctl
+  lctl lmet lalt           @met           @mov caps rctl
 )
 
 (deflayer movelayer
@@ -36,5 +38,13 @@
   tab  q    w    e    r    t    y    u    up    bspc    p    [    ]    \
   @sym  a   s    d    f    g    h    left    down    right    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lalt           spc            @mov caps rctl
+  lctl lmet lalt           spc            @mov caps rctl
+)
+
+(deflayer metlayer
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  @sym  a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           @met            ralt caps rctl
 )
