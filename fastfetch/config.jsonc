@@ -5,14 +5,9 @@
     "separator",
     {
         "type": "os",
-        "format": "{name} (Arch btw)",
+        "format": "{name}-{arch} (Arch btw)",
     },
     "kernel",
-    {
-        "type": "os",
-        "key": "Architecture",
-        "format": "{arch}",
-    },
     "uptime",
     "packages",
     "de",
