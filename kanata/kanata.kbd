@@ -13,7 +13,7 @@
 (defalias
   sym (layer-toggle symlayer)
   mov (layer-toggle movelayer)
-  ctrlspc (tap-hold 250 250 spc lctl)
+  ctrlspc (tap-hold-release 200 200 spc lctl)
 )
 
 (deflayer default
