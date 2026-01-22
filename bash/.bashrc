@@ -14,7 +14,7 @@ bind 'set enable-bracketed-paste off'
 
 # Variables
 EDITOR=nvim
-# PS1="\033[32m\\w \\$\033[37m "
+PS1="[$SHLVL $USER@$HOSTNAME \\w]$\033[37m "
 # --------------
 
 # Aliases
