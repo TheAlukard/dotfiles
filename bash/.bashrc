@@ -22,7 +22,6 @@ alias cls='clear'
 alias py='python'
 alias vim='/usr/bin/nvim'
 alias vi='/usr/bin/vim'
-alias v='/usr/bin/vi'
 alias ls='ls -AX'
 alias ff='clear&&fastfetch'
 # --------------
