@@ -26,5 +26,10 @@
     "break",
     "colors",
     ],
-    "logo": "arch",
+    "logo": {
+        "type": "kitty",
+        "source": "/mnt/d/Photos/soulgoodman.png",
+        "width": 40,
+        "preserveAspectRatio": true,
+    },
 }
