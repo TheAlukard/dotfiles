@@ -13,7 +13,6 @@
 (defalias
   sym (layer-toggle symlayer)
   mov (layer-toggle movelayer)
-  ctrl_s (multi (layer-toggle ctrls_layer) lctl)
 )
 
 (deflayer default
@@ -30,14 +29,6 @@
   @sym  a    @ctrl_s  S-2    S-6    S-\    S-8    S-[    S-]    -    S--    S-5    ret
   lsft z    x    c    S-=    S-/    S-4    S-3    [    ]    S-1    rsft
   lctl lalt           esc           @mov caps rctl
-)
-
-(deflayer ctrls_layer
-  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  @sym  a    @ctrl_s    d    f    g    h    j    k    l    ;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lalt           spc            ralt caps rctl
 )
 
 (deflayer movelayer
