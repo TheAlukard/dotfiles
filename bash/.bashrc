@@ -30,6 +30,10 @@ alias ff='clear&&fastfetch'
 function mkcd {
     mkdir -p "${1}" && cd "${1}"
 }
+
+function kanata_rel {
+    systemctl --user restart kanata.service
+}
 # --------------
 
 # eval "$(oh-my-posh init bash)"
