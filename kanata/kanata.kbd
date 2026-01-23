@@ -13,7 +13,6 @@
 (defalias
   sym (layer-toggle symlayer)
   mov (layer-toggle movelayer)
-  ctrlspc (tap-hold 0 250 spc lctl)
 )
 
 (deflayer default
@@ -21,7 +20,7 @@
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   @sym a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lalt           @ctrlspc            @mov caps rctl
+  lctl lalt           spc            @mov caps rctl
 )
 
 (deflayer symlayer
