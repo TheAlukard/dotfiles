@@ -13,6 +13,7 @@
 (defalias
   sym (layer-toggle symlayer)
   mov (layer-toggle movelayer)
+  ldr (multi lalt lctl lsft)
 )
 
 (deflayer default
@@ -28,7 +29,7 @@
   tab  q    w    S-`    S-'    S-;    S-7    S-9   S-0    \    =    (unicode 😂)    ]    \
   @sym a   s  S-2    S-6    S-\    S-8    S-[    S-]    -    S--    S-5    ret
   lsft z    x    c    S-=    S-/    S-4    S-3    [    ]    S-1    rsft
-  lctl lalt           esc           @mov caps rctl
+  lctl @ldr           esc           @mov caps rctl
 )
 
 (deflayer movelayer
