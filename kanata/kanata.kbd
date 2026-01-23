@@ -21,6 +21,8 @@
   msrt (movemouse-right 4 2)
   mwu (mwheel-up 50 80)
   mwd (mwheel-down 50 80)
+  msfst (movemouse-speed 200)
+  msslw (movemouse-speed 50)
 )
 
 (deflayer default
@@ -50,7 +52,7 @@
 (deflayer mouselayer
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    mrgt    @msup    mmid  p  [    ]    \
-  @sym a    s    d    f    g    h    @mslf    @msdn    @msrt    mlft    '    ret
+  @sym a    s    d    @msslw    @msfst    h    @mslf    @msdn    @msrt    mlft    '    ret
   lsft z    x    c    v    b    @mwu    @mwd    ,    .    /    rsft
   lctl @msl           spc            @mov caps rctl
 )
