@@ -13,7 +13,7 @@
 (defalias
   sym (layer-toggle symlayer)
   mov (layer-toggle movelayer)
-  ldr (multi lalt lctl spc)
+  ldr (multi lsft lalt lctl spc)
 )
 
 (deflayer default
