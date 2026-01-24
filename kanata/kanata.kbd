@@ -13,7 +13,8 @@
 (defalias
   sym (layer-toggle symlayer)
   mov (layer-toggle movelayer)
-  msl (layer-toggle mouselayer)
+  msl (layer-switch mouselayer)
+  defl (layer-switch default)
   ;; ldr (multi lsft lalt lctl spc)
   msup (movemouse-up 4 2)
   mslf (movemouse-left 4 2)
@@ -52,7 +53,7 @@
 (deflayer mouselayer
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    mrgt    @msup    mmid  p  [    ]    \
-  @sym a    s    d    @msslw    @msfst    h    @mslf    @msdn    @msrt    mlft    '    ret
+  @defl a    s    d    @msslw    @msfst    h    @mslf    @msdn    @msrt    mlft    '    ret
   lsft z    x    c    v    b    @mwu    @mwd    ,    .    /    rsft
-  lctl @msl           spc            @mov caps rctl
+  lctl lalt           spc            @mov caps rctl
 )
