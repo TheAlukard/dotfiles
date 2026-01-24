@@ -26,6 +26,7 @@ alias ls="ls -AX"
 alias ff="clear&&fastfetch"
 alias yay="yay -Syu && yay -Sc"
 alias dot="cd '$HOME/dotfiles'"
+alias prog="cd '$HOME/programming'"
 # --------------
 
 # Functions
