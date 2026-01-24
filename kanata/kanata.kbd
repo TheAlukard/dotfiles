@@ -15,15 +15,7 @@
   mov (layer-toggle movelayer)
   msl (layer-switch mouselayer)
   defl (layer-switch default)
-  ;; ldr (multi lsft lalt lctl spc)
-  msup (movemouse-up 4 3)
-  mslf (movemouse-left 4 3)
-  msdn (movemouse-down 4 3)
-  msrt (movemouse-right 4 3)
-  mwu (mwheel-up 50 80)
-  mwd (mwheel-down 50 80)
-  msfst (movemouse-speed 200)
-  msslw (movemouse-speed 30)
+  ldr (multi lsft lalt lctl spc)
 )
 
 (deflayer default
@@ -39,7 +31,7 @@
   tab  q    w    S-`    S-'    S-;    S-7    S-9   S-0    \    =    (unicode 😂)    ]    \
   @sym a   s  S-2    S-6    S-\    S-8    S-[    S-]    -    S--    S-5    ret
   lsft z    x    c    S-=    S-/    S-4    S-3    [    ]    S-1    rsft
-  lctl @msl           esc           @mov caps rctl
+  lctl @ldr           esc           @mov caps rctl
 )
 
 (deflayer movelayer
@@ -48,12 +40,4 @@
   @sym 6   7    8    9    0    h    left    down    right    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lalt           spc            @mov caps rctl
-)
-
-(deflayer mouselayer
-  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    mrgt    @msup    mmid  p  [    ]    \
-  @defl a    s    d    f    @msfst    h    @mslf    @msdn    @msrt    mlft    '    ret
-  lsft z    x    c    v    b    @mwu    @mwd    ,    .    /    rsft
-  lctl lalt           @msslw            @mov caps rctl
 )
