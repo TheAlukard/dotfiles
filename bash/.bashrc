@@ -24,6 +24,7 @@ alias vim='/usr/bin/nvim'
 alias vi='/usr/bin/vim'
 alias ls='ls -AX'
 alias ff='clear&&fastfetch'
+alias dot="cd '$HOME/dotfiles'"
 # --------------
 
 # Functions
