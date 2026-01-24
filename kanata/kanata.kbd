@@ -13,8 +13,6 @@
 (defalias
   sym (layer-toggle symlayer)
   mov (layer-toggle movelayer)
-  msl (layer-switch mouselayer)
-  defl (layer-switch default)
   ldr (multi lsft lalt lctl spc)
 )
 
