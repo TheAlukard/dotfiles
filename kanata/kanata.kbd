@@ -15,12 +15,13 @@
   mov (layer-toggle movelayer)
   ldr (multi lsft lalt lctl spc)
   dctl (tap-hold-release 200 200 d lctl)
+  salt (tap-hold-release 200 200 s lalt)
 )
 
 (deflayer default
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  @sym a    s    @dctl    f    g    h    j    k    l    ;    '    ret
+  @sym a    @salt    @dctl    f    g    h    j    k    l    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lalt           spc            @mov caps rctl
 )
