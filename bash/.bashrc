@@ -23,11 +23,10 @@ alias py="python"
 alias vim="/usr/bin/nvim"
 alias vi="/usr/bin/vim"
 alias ls="ls -AX"
-alias ff="clear&&fastfetch"
+alias ff="clear && fastfetch"
 alias yay="yay -Syu && yay -Sc"
-alias dot="cd '$HOME/dotfiles'"
+alias reload="source '$HOME/.bashrc'"
 alias home="cd '$HOME'"
-alias prog="cd '$HOME/programming'"
 alias desk="cd '$HOME/Desktop'"
 alias dloads="cd '$HOME/Downloads'"
 # --------------
@@ -39,6 +38,14 @@ function mkcd {
 
 function kanata_rel {
     systemctl --user restart kanata.service
+}
+
+function prog {
+    cd "$HOME/programming""$1"
+}
+
+function dot {
+    cd "$HOME/dotfiles""$1"
 }
 # --------------
 
