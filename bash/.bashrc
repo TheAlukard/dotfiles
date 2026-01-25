@@ -25,7 +25,6 @@ alias vi="/usr/bin/vim"
 alias ls="ls -AX"
 alias ff="clear && fastfetch"
 alias yay="yay -Syu && yay -Sc"
-alias reload="source '$HOME/.bashrc'"
 alias home="cd '$HOME'"
 alias desk="cd '$HOME/Desktop'"
 alias dloads="cd '$HOME/Downloads'"
@@ -41,11 +40,11 @@ function kanata_rel {
 }
 
 function prog {
-    cd "$HOME/programming""$1"
+    cd "$HOME/programming/$1"
 }
 
 function dot {
-    cd "$HOME/dotfiles""$1"
+    cd "$HOME/dotfiles/$1"
 }
 # --------------
 
