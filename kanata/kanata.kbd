@@ -14,7 +14,7 @@
   sym (layer-toggle symlayer)
   mov (layer-toggle movelayer)
   ldr (multi lsft lalt lctl spc)
-  actl (tap-hold 200 200 a lctl)
+  actl (tap-hold-release 200 200 a lctl)
 )
 
 (deflayer default
