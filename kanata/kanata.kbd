@@ -14,10 +14,10 @@
   sym (layer-toggle symlayer)
   mov (layer-toggle movelayer)
   ldr (multi lsft lalt lctl spc)
-  dctl (tap-hold-release 200 200 d lctl)
-  salt (tap-hold-release 200 200 s lalt)
-  kctl (tap-hold-release 200 200 k rctl)
-  lalt (tap-hold-release 200 200 l ralt)
+  dctl (tap-hold 200 200 d lctl)
+  salt (tap-hold 200 200 s lalt)
+  kctl (tap-hold 200 200 k rctl)
+  lalt (tap-hold 200 200 l ralt)
 )
 
 (deflayer default
