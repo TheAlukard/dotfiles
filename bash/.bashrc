@@ -46,5 +46,8 @@ function dot {
     cd "$HOME/dotfiles/$1"
 }
 # --------------
-
 eval "$(zoxide init bash)"
+eval "$(ssh-agent -s)"
+# --------------
+
+clear
