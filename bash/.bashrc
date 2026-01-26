@@ -48,3 +48,4 @@ function dot {
 # --------------
 
 # eval "$(oh-my-posh init bash)"
+eval "$(zoxide init bash)"
