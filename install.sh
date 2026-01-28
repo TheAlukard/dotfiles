@@ -17,6 +17,7 @@ wezterm_path="$DIR/wezterm/.wezterm.lua"
 vscodium_path="$DIR/vscodium"
 fastfetch_path="$DIR/fastfetch"
 tmux_path="$DIR/tmux"
+sway_path="$DIR/sway"
 
 bash_target="$HOME/.bashrc"
 clangd_target="$HOME/.config/clangd"
@@ -27,6 +28,7 @@ wezterm_target="$HOME/.wezterm.lua"
 vscodium_target="$HOME/.config/VSCodium/User"
 fastfetch_target="$HOME/.config/fastfetch"
 tmux_target="$HOME/.config/tmux"
+sway_target="$HOME/.config/sway"
 
 slink $bash_path $bash_target
 
@@ -46,3 +48,5 @@ slink $vscodium_path"/keybindings.json" $vscodium_target"/keybindings.json"
 slink $fastfetch_path $fastfetch_target
 
 slink $tmux_path $tmux_target
+
+slink $sway_path $sway_target
