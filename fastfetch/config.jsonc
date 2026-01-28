@@ -20,8 +20,16 @@
     "gpu",
     "memory",
     "swap",
-    "disk",
-    "display",
+    {
+        "type": "disk",
+        "key": "Disk {mountpoint}",
+        "format": "{size-used} / {size-total} ({size-percentage})"
+    },
+    {
+        "type": "display",
+        "key": "Display",
+        "format":"{width}x{height} {refresh-rate}hz"
+    },
     "locale",
     "break",
     "colors",
