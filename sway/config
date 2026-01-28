@@ -25,10 +25,12 @@ output HDMI-A-1 {
     bg $wallpaper fill
 }
 
-default_border none 
+default_border pixel 3
+focus_follows_mouse yes
 gaps inner 3
 gaps outer 3
-
+corner_radius 5
+ 
 # exec swayidle -w \
 #          timeout 300 'swaylock -f -c 000000' \
 #          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
