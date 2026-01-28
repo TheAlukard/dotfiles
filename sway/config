@@ -14,8 +14,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term kitty
-# Your preferred application launcher
+set $term kitty # Your preferred application launcher
 set $menu wmenu-run
 
 set $wallpaper "/mnt/d/Photos/Wallpapers/Wallpaper284.png"
@@ -25,6 +24,10 @@ output HDMI-A-1 {
     mode 1920x1080@74.973HZ
     bg $wallpaper fill
 }
+
+default_border none 
+gaps inner 3
+gaps outer 3
 
 # exec swayidle -w \
 #          timeout 300 'swaylock -f -c 000000' \
@@ -153,7 +156,7 @@ input type:pointer {
     bindsym $mod+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    bindsym $mod+Shift+space floating toggle
+    bindsym $mod+m floating toggle
 
     # Swap focus between the tiling area and the floating area
     bindsym $mod+Shift+f focus mode_toggle
