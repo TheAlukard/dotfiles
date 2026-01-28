@@ -7,10 +7,11 @@ function slink {
 
 SCRIPT_PATH=$(realpath $0)
 DIR=$(dirname $SCRIPT_PATH)
+CONFIG="$HOME/.config"
 
 bash_path="$DIR/bash/.bashrc"
 clangd_path="$DIR/clangd"
-kanata_path="$DIR/kanata/kanata.kbd"
+kanata_path="$DIR/kanata"
 kitty_path="$DIR/kitty"
 nvim_path="$DIR/nvim"
 wezterm_path="$DIR/wezterm/.wezterm.lua"
@@ -21,7 +22,7 @@ sway_path="$DIR/sway"
 
 bash_target="$HOME/.bashrc"
 clangd_target="$HOME/.config/clangd"
-kanata_target="$HOME/.config/kanata.kbd"
+kanata_target="$HOME/.config/kanata"
 kitty_target="$HOME/.config/kitty"
 nvim_target="$HOME/.config/nvim"
 wezterm_target="$HOME/.wezterm.lua"
