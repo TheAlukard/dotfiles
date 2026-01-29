@@ -3,19 +3,16 @@ HISTTIMEFORMAT="[%F %T] "
 HISTFILE=~/.bash_eternal_history
 HISTCONTROL=ignoredups
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
-# --------------
 
 #Options
 bind "TAB:menu-complete"
 bind "C-H:shell-backward-kill-word"
 bind "set completion-ignore-case on"
 bind "set enable-bracketed-paste off"
-# --------------
 
 # Variables
 EDITOR=nvim
 # PS1="[$SHLVL $USER@$HOSTNAME \\w]$\033[37m "
-# --------------
 
 # Aliases
 alias cls="clear"
@@ -28,7 +25,6 @@ alias home="cd '$HOME'"
 alias desk="cd '$HOME/Desktop'"
 alias dloads="cd '$HOME/Downloads'"
 alias tmux-go="tmux attach -d -t"
-# --------------
 
 # Functions
 function mkcd {
@@ -46,9 +42,10 @@ function prog {
 function dot {
     cd "$HOME/dotfiles/$1"
 }
-# --------------
+
+# Evals
 eval "$(zoxide init bash)"
 eval "$(ssh-agent -s)"
-# --------------
 
+# Clear (duh)
 clear
