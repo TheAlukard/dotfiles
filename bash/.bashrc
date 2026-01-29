@@ -44,7 +44,7 @@ function dot {
 }
 
 function man {
-    sh -c "man $1 | nvim -c 'set filetype=man'"
+    sh -c "man $1 | nvim -R -c 'set filetype=man'"
 }
 
 # Evals
