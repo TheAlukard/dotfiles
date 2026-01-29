@@ -11,7 +11,7 @@ bind "set completion-ignore-case on"
 bind "set enable-bracketed-paste off"
 
 # Variables
-EDITOR=nvim
+export EDITOR=nvim
 # PS1="[$SHLVL $USER@$HOSTNAME \\w]$\033[37m "
 
 # Aliases
@@ -41,6 +41,10 @@ function prog {
 
 function dot {
     cd "$HOME/dotfiles/$1"
+}
+
+function man {
+    sh -c "man $1 | nvim -c 'set filetype=man'"
 }
 
 # Evals
