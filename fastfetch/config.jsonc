@@ -37,7 +37,7 @@
     "logo": {
         "type": "kitty",
         "source": "/mnt/d/Photos/soulgoodman.png",
-        "width": 40,
+        "width": 30,
         "preserveAspectRatio": true,
     },
 }
