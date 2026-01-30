@@ -25,6 +25,7 @@ alias home="cd '$HOME'"
 alias desk="cd '$HOME/Desktop'"
 alias dloads="cd '$HOME/Downloads'"
 alias tmux-go="tmux attach -d -t"
+alias f="fg"
 
 # Functions
 function mkcd {
