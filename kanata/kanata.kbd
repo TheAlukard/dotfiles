@@ -58,14 +58,6 @@
   lctl lmet lalt           spc            @mov caps rctl
 )
 
-(deflayer arabic
-  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  $ar-q    $ar-w    $ar-e    $ar-r    $ar-t    $ar-y    $ar-u    $ar-i    $ar-o    $ar-p    [    ]    \
-  @sym $ar-a    $ar-s    $ar-d    $ar-f    $ar-g    $ar-h    $ar-j    $ar-k    $ar-l    $ar-;    '    ret
-  lsft $ar-z    $ar-x    $ar-c    $ar-v    $ar-b    $ar-n    $ar-m    $ar-,    $ar-.    $ar-/    rsft
-  lctl lmet lalt           spc            @mov caps rctl
-)
-
 (deflayer symlayer
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    S-`    S-'    S-;    S-7    S-9   S-0    \    =    (unicode 😂)    ]    \
@@ -81,3 +73,12 @@
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lmet lalt           spc            @mov caps rctl
 )
+
+(deflayer arabic
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  $ar-q    $ar-w    $ar-e    $ar-r    $ar-t    $ar-y    $ar-u    $ar-i    $ar-o    $ar-p    [    ]    \
+  @sym $ar-a    $ar-s    $ar-d    $ar-f    $ar-g    $ar-h    $ar-j    $ar-k    $ar-l    $ar-;    '    ret
+  lsft $ar-z    $ar-x    $ar-c    $ar-v    $ar-b    $ar-n    $ar-m    $ar-,    $ar-.    $ar-/    rsft
+  lctl lmet lalt           spc            @mov caps rctl
+)
+
