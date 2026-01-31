@@ -32,22 +32,22 @@
     ar-s (unicode س)
     ar-d (unicode ي)
     ar-f (unicode ب)
-    ar-g (unicode لا)
-    ar-h (unicode ت)
-    ar-j (unicode ن)
-    ar-k (unicode م)
-    ar-l (unicode ك)
-    ar-; (unicode ئ)
-    ar-z (unicode ء)
-    ar-x (unicode ؤ)
-    ar-c (unicode ر)
-    ar-v (unicode لا)
-    ar-b (unicode ى)
-    ar-n (unicode ة)
-    ar-m (unicode و)
-    ar-, (unicode ز)
-    ar-. (unicode ظ)
-    ar-/ (unicode /)
+    ar-g (unicode ل)
+    ar-h (unicode ا)
+    ar-j (unicode ت)
+    ar-k (unicode ن)
+    ar-l (unicode م)
+    ar-; (unicode ك)
+    ar-z (unicode ئ)
+    ar-x (unicode ء)
+    ar-c (unicode ؤ)
+    ar-v (unicode ر)
+    ar-b (multi (unicode ل) (unicode ا))
+    ar-n (unicode ى)
+    ar-m (unicode ة)
+    ar-, (unicode و)
+    ar-. (unicode ز)
+    ar-/ (unicode ظ)
 )
 
 (deflayer default
@@ -60,9 +60,9 @@
 
 (deflayer arabic
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  @sym a    s    d    f    g    h    j    k    l    ;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  tab  $ar-q    $ar-w    $ar-e    $ar-r    $ar-t    $ar-y    $ar-u    $ar-i    $ar-o    $ar-p    [    ]    \
+  @sym $ar-a    $ar-s    $ar-d    $ar-f    $ar-g    $ar-h    $ar-j    $ar-k    $ar-l    $ar-;    '    ret
+  lsft $ar-z    $ar-x    $ar-c    $ar-v    $ar-b    $ar-n    $ar-m    $ar-,    $ar-.    $ar-/    rsft
   lctl lmet lalt           spc            @mov caps rctl
 )
 
