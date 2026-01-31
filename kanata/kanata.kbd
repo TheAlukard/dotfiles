@@ -18,37 +18,47 @@
 )
 
 (defvar
-    ar-a (unicode أ)
-    ar-b (unicode ب)
-    ar-t (unicode ت)
-    ar-th (unicode ث)
-    ar-g (unicode ج)
-    ar-7 (unicode ح)
-    ar-kh (unicode خ)
-    ar-d (unicode د)
-    ar-tz (unicode ذ)
-    ar-r (unicode ر)
-    ar-z (unicode ز)
+    ar-q (unicode ض)
+    ar-w (unicode ص)
+    ar-e (unicode ث)
+    ar-r (unicode ق)
+    ar-t (unicode ف)
+    ar-y (unicode غ)
+    ar-u (unicode ع)
+    ar-i (unicode ه)
+    ar-o (unicode خ)
+    ar-p (unicode ح)
+    ar-a (unicode ش)
     ar-s (unicode س)
-    ar-sh (unicode ش)
-    ar-ss (unicode ص)
-    ar-dd (unicode ض)
-    ar-tt (unicode ط)
-    ar-tzz (unicode ظ)
-    ar-3 (unicode ع)
-    ar-gh (unicode غ)
-    ar-f (unicode ف)
-    ar-kk (unicode ق)
-    ar-k (unicode ك)
-    ar-l (unicode ل)
-    ar-m (unicode م)
-    ar-n (unicode ن)
-    ar-h (unicode ه)
-    ar-w (unicode و)
-    ar-y (unicode ي)
+    ar-d (unicode ي)
+    ar-f (unicode ب)
+    ar-g (unicode لا)
+    ar-h (unicode ت)
+    ar-j (unicode ن)
+    ar-k (unicode م)
+    ar-l (unicode ك)
+    ar-; (unicode ئ)
+    ar-z (unicode ء)
+    ar-x (unicode ؤ)
+    ar-c (unicode ر)
+    ar-v (unicode لا)
+    ar-b (unicode ى)
+    ar-n (unicode ة)
+    ar-m (unicode و)
+    ar-, (unicode ز)
+    ar-. (unicode ظ)
+    ar-/ (unicode /)
 )
 
 (deflayer default
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  @sym a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            @mov caps rctl
+)
+
+(deflayer arabic
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   @sym a    s    d    f    g    h    j    k    l    ;    '    ret
