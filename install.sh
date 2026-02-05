@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 function slink {
     ln -snf $1 $2
