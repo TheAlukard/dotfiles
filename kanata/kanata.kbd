@@ -13,6 +13,7 @@
 (defalias
   sym (layer-toggle symlayer)
   mov (layer-toggle movelayer)
+  nlr (layer-toggle numlayer)
   semictrl (tap-hold-press 150 150 ; lctl)
 )
 
