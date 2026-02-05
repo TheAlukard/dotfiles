@@ -74,6 +74,14 @@
   lctl lmet lalt           spc            @mov caps rctl
 )
 
+(deflayer numlayer
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  @sym a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            @mov caps rctl
+)
+
 (deflayer arabic
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  $ar-q    $ar-w    $ar-e    $ar-r    $ar-t    $ar-y    $ar-u    $ar-i    $ar-o    $ar-p    [    ]    \
