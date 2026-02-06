@@ -31,6 +31,6 @@ require('neoterm').setup({
 	clear_on_run = true,
 	position = 'fullscreen',
 	noinsert = false,
-	width = 0.5,
+	width = 1,
 	height = 1,
 })
