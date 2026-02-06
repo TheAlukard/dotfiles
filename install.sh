@@ -22,6 +22,7 @@ declare -a config=(
     [5]=fastfetch
     [6]=tmux
     [7]=sway
+    [8]=scripts
 )
 
 for i in "${home[@]}"; do
