@@ -50,6 +50,9 @@ function man {
     sh -c "man $1 | nvim -R -c 'set filetype=man'"
 }
 
+# Source
+source /etc/profile.d/emscripten.sh
+
 # Evals
 eval "$(zoxide init bash)"
 eval "$(ssh-agent -s)"
