@@ -15,5 +15,8 @@ map("n", "<leader>h", "<CMD>:lua require('nvim-highlight-colors').toggle()<CR>",
 map("i", "<C-/>", "<C-o>:NeotermToggle<CR>", {})
 map("t", "<C-/>", "<CMD>:NeotermToggle<CR>", {})
 map("n", "<C-/>", "<CMD>:NeotermToggle<CR>", {})
+map("i", "<C-_>", "<C-o>:NeotermToggle<CR>", {})
+map("t", "<C-_>", "<CMD>:NeotermToggle<CR>", {})
+map("n", "<C-_>", "<CMD>:NeotermToggle<CR>", {})
 -- map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 map("n", "<leader>a", "<C-z>", {})
