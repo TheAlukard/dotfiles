@@ -1,7 +1,7 @@
 #!/bin/env bash
 
-session=$(tmux ls -F'#{session_name}' | fzf)
+selected=$(tmux ls -F'#{session_name}' 2>/dev/null | fzf --bind 'enter:accept-or-print-query')
 
-if [ $session ]; then
-    tmux a -dt "$session"
+if [[ $selected ]]; then
+    tmux new -ADs "$selected"
 fi
