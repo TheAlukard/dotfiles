@@ -14,7 +14,7 @@
   sym (layer-toggle symlayer)
   mov (layer-toggle movelayer)
   nlr (layer-toggle numlayer)
-  qctl (tap-hold 150 150 q lctl)
+  qctl (tap-hold 200 200 q lctl)
 )
 
 (defvar
