@@ -22,6 +22,5 @@ declare -a config=(
 # done
 
 for i in "${config[@]}"; do
-    echo "$i:"
-    find "$i"
+    files=`find $i -mindepth 1 | tr '\n' ' '`
 done
