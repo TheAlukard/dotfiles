@@ -1,8 +1,9 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 
-repo_path=$(find ~/programming/repos -mindepth 1 -maxdepth 1 -type d | fzf)
+PROJECTS="$HOME/programming/repos"
 
-if [[ $repo_path ]]; then
-    repo_name=$(basename "$repo_path")
-    tmux new -ADs "$repo_name" -c "$repo_path"
+repo_name=$(find "$PROJECTS" -mindepth 1 -maxdepth 1 -type d -exec basename {} \; | fzf)
+
+if [[ -n "$repo_name" ]]; then
+    tmux new -ADs "$repo_name" -c "$PROJECTS/$repo_name"
 fi
