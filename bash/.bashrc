@@ -26,7 +26,7 @@ alias ls="ls -AX"
 alias ff="clear && fastfetch"
 alias home="cd '$HOME'"
 alias desk="cd '$HOME/Desktop'"
-alias dloads="cd '$HOME/Downloads'"
+alias down="cd '$HOME/Downloads'"
 alias f="fg"
 alias cd="z"
 
