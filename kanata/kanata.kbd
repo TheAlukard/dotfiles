@@ -14,7 +14,6 @@
   sym (layer-toggle symlayer)
   mov (layer-toggle movelayer)
   nlr (layer-toggle numlayer)
-  qctl (tap-hold 200 200 q lctl)
   vctl (tap-hold 200 200 v lctl)
 )
 
