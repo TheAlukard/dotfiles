@@ -13,7 +13,7 @@ bind -x '"\C-a":"~/.config/scripts/open_repos.sh"'
 bind -x '"\C-e":"~/.config/scripts/open_session.sh"'
 
 # Variables
-export EDITOR=nvim
+EDITOR=nvim
 # PS1="[$SHLVL $USER@$HOSTNAME \\w]$\033[37m "
 
 # Aliases
