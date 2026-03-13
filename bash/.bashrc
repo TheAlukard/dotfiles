@@ -14,6 +14,7 @@ bind -x '"\C-e":"~/.config/scripts/open_session.sh"'
 
 # Variables
 EDITOR=nvim
+export "GTK_USE_PORTAL=1" 
 # PS1="[$SHLVL $USER@$HOSTNAME \\w]$\033[37m "
 
 # Aliases
@@ -49,6 +50,44 @@ function dot {
 
 function man {
     sh -c "man $1 | nvim -R -c 'set filetype=man'"
+}
+
+function makefile {
+TEMPLATE=$(cat << 'EOF'
+CC=gcc
+SRC=$(wildcard ./src/*.c)
+CFLAGS=-O3 -Werror -Wall -Wextra
+DFLAGS=-O0 -g -Wall -Wextra
+LFLAGS=
+BUILD=build
+EXE=$(BUILD)/exe
+DEBUG=$(BUILD)/deb
+DEFS=
+
+all: $(BUILD) $(EXE) $(DEBUG)
+
+$(EXE): $(SRC)
+    $(CC) $(DEFS) $(CFLAGS) -o $(EXE) $(SRC) $(LFLAGS)
+
+$(DEBUG): $(SRC)
+    $(CC) $(DEFS) $(DFLAGS) -o $(DEBUG) $(SRC) $(LFLAGS)
+
+run: $(EXE)
+    ./$(EXE)
+
+debug: $(DEBUG)
+    ./$(DEBUG)
+
+$(BUILD):
+    mkdir -p $(BUILD)
+
+.PHONY: clean
+clean:
+    rm -rf build
+EOF
+)
+
+    printf "%s" "${TEMPLATE}" >> "./Makefile"
 }
 
 # Source
