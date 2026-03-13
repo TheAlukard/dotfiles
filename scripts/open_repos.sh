@@ -2,8 +2,11 @@
 
 PROJECTS="$HOME/programming/repos"
 
-repo_name=$(find "$PROJECTS" -mindepth 1 -maxdepth 1 -type d -exec basename {} \; | fzf)
+selected=$(find "$PROJECTS" -mindepth 1 -maxdepth 1 -type d -exec basename {} \; | fzf --bind 'enter:accept-or-print-query')
 
-if [[ -n "$repo_name" ]]; then
-    tmux new -ADs "$repo_name" -c "$PROJECTS/$repo_name"
+if [[ -n "$selected" ]]; then
+    if [[ ! -d "$PROJECTS/$selected" ]]; then
+        mkdir -p "$PROJECTS/$selected"
+    fi
+    tmux new -ADs "$selected" -c "$PROJECTS/$selected"
 fi
