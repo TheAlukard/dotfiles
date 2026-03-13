@@ -53,8 +53,8 @@ function man {
 }
 
 function makefile {
-TEMPLATE=$(cat << 'EOF'
-CC=gcc
+TEMPLATE=$(printf "%s"\
+'CC=gcc
 SRC=$(wildcard ./src/*.c)
 CFLAGS=-O3 -Werror -Wall -Wextra
 DFLAGS=-O0 -g -Wall -Wextra
@@ -67,25 +67,23 @@ DEFS=
 all: $(BUILD) $(EXE) $(DEBUG)
 
 $(EXE): $(SRC)
-    $(CC) $(DEFS) $(CFLAGS) -o $(EXE) $(SRC) $(LFLAGS)
+\t$(CC) $(DEFS) $(CFLAGS) -o $(EXE) $(SRC) $(LFLAGS)
 
 $(DEBUG): $(SRC)
-    $(CC) $(DEFS) $(DFLAGS) -o $(DEBUG) $(SRC) $(LFLAGS)
+\t$(CC) $(DEFS) $(DFLAGS) -o $(DEBUG) $(SRC) $(LFLAGS)
 
 run: $(EXE)
-    ./$(EXE)
+\t./$(EXE)
 
 debug: $(DEBUG)
-    ./$(DEBUG)
+\t./$(DEBUG)
 
 $(BUILD):
-    mkdir -p $(BUILD)
+\tmkdir -p $(BUILD)
 
 .PHONY: clean
 clean:
-    rm -rf build
-EOF
-)
+\trm -rf build')
 
     printf "%s" "${TEMPLATE}" >> "./Makefile"
 }
