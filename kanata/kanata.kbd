@@ -15,7 +15,7 @@
   mov (layer-toggle movelayer)
   nlr (layer-toggle numlayer)
   ctll (multi lctl (layer-toggle clean))
-  ctlesc (tap-hold-press 200 200 esc @ctll)
+  ctlesc (tap-hold 200 200 esc @ctll)
 )
 
 (defvar
