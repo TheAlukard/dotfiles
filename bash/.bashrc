@@ -10,6 +10,7 @@ bind "C-H:shell-backward-kill-word"
 bind "set completion-ignore-case on"
 bind "set enable-bracketed-paste off"
 bind -x '"\C-a":"~/.config/scripts/open_repos.sh"'
+bind -x '"\C-t":"~/.config/scripts/open_repos.sh"'
 bind -x '"\C-e":"~/.config/scripts/open_session.sh"'
 
 # Variables
