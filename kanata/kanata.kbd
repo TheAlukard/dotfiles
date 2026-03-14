@@ -14,8 +14,6 @@
   sym (layer-toggle symlayer)
   mov (layer-toggle movelayer)
   nlr (layer-toggle numlayer)
-  vctl (tap-hold 200 200 v lctl)
-  tabctl (tap-hold 150 150 tab lctl)
 )
 
 (defvar
@@ -53,9 +51,9 @@
 
 (deflayer default
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  @tabctl  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   @sym a    s    d    f    g    h    j    k    l    ;    '    ret
-  lsft z    x    c    @vctl    b    n    m    ,    .    /    rsft
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lmet lalt           spc            @mov caps rctl
 )
 
