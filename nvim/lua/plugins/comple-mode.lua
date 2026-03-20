@@ -25,6 +25,7 @@ return {
         -- the command (and behave more like `:!`), add:
         -- bang_expansion = true,
         hidden_buffer = true,
+        default_command = "make ",
     }
   end
 }
