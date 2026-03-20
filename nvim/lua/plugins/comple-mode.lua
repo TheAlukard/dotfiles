@@ -24,6 +24,7 @@ return {
         -- to make `:Compile` replace special characters (e.g. `%`) in
         -- the command (and behave more like `:!`), add:
         -- bang_expansion = true,
+        hidden_buffer = true,
     }
   end
 }
