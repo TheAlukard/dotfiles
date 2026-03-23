@@ -4,6 +4,7 @@ local enter = vim.api.nvim_replace_termcodes("<enter>", true, true, true)
 
 local makefile = "CC=gcc"..esc..
 "oSRC=$(wildcard ./src/*.c)"..esc..
+"oHEADERS=$(wildcard ./src/*.h)"..esc..
 "oCFLAGS=-O3 -Werror -Wall -Wextra"..esc..
 "oDFLAGS=-O0 -g -Wall -Wextra"..esc..
 "oLFLAGS="..esc..
@@ -14,10 +15,10 @@ local makefile = "CC=gcc"..esc..
 "o"..esc..
 "oall: $(BUILD) $(EXE) $(DEBUG)"..esc..
 "o"..esc..
-"o$(EXE): $(SRC)"..esc..
+"o$(EXE): $(SRC) $(HEADERS)"..esc..
 "o$(CC) $(DEFS) $(CFLAGS) -o $(EXE) $(SRC) $(LFLAGS)"..esc..
 "o"..esc..
-"o$(DEBUG): $(SRC)"..esc..
+"o$(DEBUG): $(SRC) $(HEADERS)"..esc..
 "o$(CC) $(DEFS) $(DFLAGS) -o $(DEBUG) $(SRC) $(LFLAGS)"..esc..
 "o"..esc..
 "orun: $(EXE)"..esc..
