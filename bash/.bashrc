@@ -53,42 +53,6 @@ function man {
     sh -c "man $1 | nvim -R -c 'set filetype=man'"
 }
 
-function makefile {
-TEMPLATE=$(printf "%s"\
-'CC=gcc
-SRC=$(wildcard ./src/*.c)
-CFLAGS=-O3 -Werror -Wall -Wextra
-DFLAGS=-O0 -g -Wall -Wextra
-LFLAGS=
-BUILD=build
-EXE=$(BUILD)/exe
-DEBUG=$(BUILD)/deb
-DEFS=
-
-all: $(BUILD) $(EXE) $(DEBUG)
-
-$(EXE): $(SRC)
-\t$(CC) $(DEFS) $(CFLAGS) -o $(EXE) $(SRC) $(LFLAGS)
-
-$(DEBUG): $(SRC)
-\t$(CC) $(DEFS) $(DFLAGS) -o $(DEBUG) $(SRC) $(LFLAGS)
-
-run: $(EXE)
-\t./$(EXE)
-
-debug: $(DEBUG)
-\t./$(DEBUG)
-
-$(BUILD):
-\tmkdir -p $(BUILD)
-
-.PHONY: clean
-clean:
-\trm -rf build')
-
-    printf "%s" "${TEMPLATE}" >> "./Makefile"
-}
-
 # Source
 source /etc/profile.d/emscripten.sh
 
