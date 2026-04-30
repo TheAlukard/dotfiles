@@ -45,6 +45,12 @@ function prog {
     cd "$HOME/programming/$1"
 }
 
+function proj {
+    local selected
+    selected=$(find "$HOME/programming/" -mindepth 1 -maxdepth 1 -type d -exec basename {} \; | fzf --bind 'enter:accept-or-print-query')
+    \cd "$HOME/programming/$selected"
+}
+
 function dot {
     cd "$HOME/dotfiles/$1"
 }
