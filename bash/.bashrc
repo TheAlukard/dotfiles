@@ -59,6 +59,14 @@ function man {
     sh -c "man $1 | nvim -R -c 'set filetype=man'"
 }
 
+# pnpm
+export PNPM_HOME="/home/pc/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
 # Source
 source /etc/profile.d/emscripten.sh
 
